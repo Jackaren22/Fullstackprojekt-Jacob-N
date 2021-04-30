@@ -1,17 +1,20 @@
 const mongoose = require('mongoose');
 
 const personSchema = new mongoose.Schema({
-    username: String, 
+    name: String,
     email: String,
+    age: Number
 });
-  
+
 const Person = mongoose.model('Person', personSchema);
 
-exports.createPerson = (username, email) => {
-    var person = new Person({
-        username: username, 
-        email: email, 
-       })
 
-       return person
+exports.createPerson = (name, email, age) => {
+    var person = new Person({
+        name: name,
+        email: email,
+        age: age
+    })
+
+    return person
 }

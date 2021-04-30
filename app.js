@@ -1,54 +1,57 @@
+//Inkludera Express.js
 const express = require('express')
-const dBModule = require('./dBModule')
-const personModel = require('./PersonModel')
+
+//Inkludera dbModule.js
+const dbModule = require('./dBModule')
+
+//Inkludera MessageModel för att kunna spara meddelanden i databasen 
+const MessageModel = require('./MessageModel')
+
+//Gör en instans klassen express
 const app = express()
+
+//Ange porten som servern kommer att lyssna på.
 const port = 3000
 
-const nameList = ["",""]
+//Sökväg till sökväg till en mapp för alla statiska sidor och sätt den som default sökväg.
+const staticDir = __dirname + '\\client\\'
+app.use(express.static(staticDir))
 
-const clientDir = __dirname + "\\client\\" //Förkortning så man slipper skriva ut den exakta mappen man är i
-
-app.set('view engine', 'ejs')
-
+//Sätt upp servern så att den kan tyda json och urlencoded
 app.use(express.json())
 app.use(express.urlencoded())
-app.use(express.static(clientDir))
 
-app.get('/', (req, res) => res.sendFile(clientDir + "index2.html")) // Hur man skickar en fil till användaren av sidan
+//Ställ in EJS som vymotor för servern. 
+app.set('view engine' , 'ejs')
 
-app.get('/cssen', (req, res) => {
-    res.sendFile(clientDir + "story.css")
-})
+//Lyssnar på GET requests på addressen <domain>/
+app.get('/', async (req, res) => {
+    //rendera sidan index.ejs
+    const messages = await MessageModel.getAllMessages();
+  res.render('index.ejs', { messages: messages});
+});
 
-app.get('/mqueen', (req, res) => {
-    res.sendFile(clientDir + "mqueen.png")
-})
+app.get('/skins', (req, res) => {
+  //Rendera sidan index.ejs
+res.render('skins.ejs');
+});
 
-app.get('/ang', (req, res) => {
-    res.sendFile(clientDir + "äng.jpg")
-})
+app.get('/abilities', (req, res) => {
+  //Rendera sidan index.ejs
+res.render('abilities.ejs');
+});
 
-app.get('/pistol', (req, res) => {
-    res.sendFile(clientDir + "pistol.png")
-})
+//Lyssnar på POST requests på addressen <domain>/
+app.post('/', async (req, res) => {
+    //Skapa ett Message objekt
+    const message = MessageModel.createMessage(req.body.email, req.body.message)
+    
+    //Spara elementet Message i databasen
+    await dbModule.storeElement(message);
 
-app.get('/hand', (req, res) => {
-    res.sendFile(clientDir + "hand.png")
-})
+    //Omdirigera klienten till huvudsidan
+    res.redirect('/');
+});
 
-app.get('/lizard', (req, res) => {
-    res.sendFile(clientDir + "lizarddance.mp4")
-})
-
-app.post('/', (req, res) => {
-
-    let person = personModel.createPerson(req.body.username, req.body.email) // Här körs PersonModel och en person med username och email skapas
-  
-    dBModule.storeElement(person) // Här körs dBModule och infromationen sparar i databasen
-  
-    res.render('pages/index.ejs', {name: req.body.username, nameList: nameList}) // Redirectar till en annan sida, i detta fall refreshar den sidan
-  })
-  
-  app.listen(port, () => {
-    console.log(`Example app listening on ports ${port}!`)
-  }) 
+//Sätt igång servern så att den kan ta emot requests på vald port.
+app.listen(port, () => console.log(`Example app listening on port ${port}!`))
