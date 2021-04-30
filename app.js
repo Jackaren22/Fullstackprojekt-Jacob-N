@@ -31,14 +31,9 @@ app.get('/', async (req, res) => {
   res.render('index.ejs', { messages: messages});
 });
 
-app.get('/skins', (req, res) => {
-  //Rendera sidan index.ejs
-res.render('skins.ejs');
-});
-
-app.get('/abilities', (req, res) => {
-  //Rendera sidan index.ejs
-res.render('abilities.ejs');
+app.get('/aboutme', (req, res) => {
+  //Rendera sidan aboutme.ejs
+res.render('aboutme');
 });
 
 //Lyssnar på POST requests på addressen <domain>/

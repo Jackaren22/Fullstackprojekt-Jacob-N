@@ -1,4 +1,3 @@
-// I don't have functions in a sepperate scss because it REALLY didnt want to work
 
 @mixin Center(){ // General function that centers stuff
     display: flex;
@@ -12,7 +11,7 @@
     justify-content: center;
     align-items: center;
     float: left;
-    width: 33.33%;
+    width: 20%;
     height: 4vw;
     background: $background;
     border: 0.5vw solid rgb(18, 40, 110);
@@ -27,85 +26,43 @@ header { // Header for all my 3 pages
     @include Center();
  
     .boxhome{
-        @include flexCenter(rgb(21, 139, 248));
+        @include flexCenter(rgb(0, 132, 255));
     }
 
-    .boxskins{
-        @include flexCenter(rgb(39, 187, 236));
+    .boxaboutme{
+        @include flexCenter(rgb(0, 132, 255));
     }
 
-    .boxabilities{
-        @include flexCenter(rgb(145, 255, 255));
+    .boxchampionpool{
+        @include flexCenter(rgb(0, 132, 255));
+    }
+
+    .boxthingsihate{
+        @include flexCenter(rgb(0, 132, 255));
+    }
+
+    .boxmisc{
+        @include flexCenter(rgb(0, 132, 255));
     }
 
 }
 .index { // CSS for everything on the Main page
-    .title {
-        @include Center();
-        background-color: blue;
-        float: left;
-        width: 100%;
-        margin-bottom: 1vw;
-    }
-    .splashart {
-        @include Center();
-        float: left;
-        width: 100%;
-    }
-    .lore {
-        float: left;
-        h3{
-            text-align: center;
-            background-color: rgb(111, 0, 255);
-        }
         p{
             @include Center();
-            background-color: rgb(111, 0, 255);
-            font-size: 25px;
+            background-color: rgb(0, 110, 255);
+            font-size: 50px;
+            width: 50%;
+            margin-left: 25%;
         }
-    }
+    
     .form {
         width: 50%;
     }
     .textbox {
-        width: 50%;
+        width: 25%;
         float: right;
         background-color: white;
+        font-size: 10px;
     }
 }
 
-.skins { // CSS for everything on the Skins page
-    .preview {
-        float: left;
-        width: 50%;
-        height: 10vwpx;
-        img{
-            width: 100%;
-        }
-        p {
-            text-align: center;
-            background-color: red;
-        }
-    }
-}
-
-.abilities{ // CSS for everything on the abilities page
-    .ability{
-        float: left;
-        width: 20%;
-        height: 6vwpx;
-        background-color: rgb(0, 255, 221);
-        video{
-            width: 100%;
-        }
-        img{
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-            width: 15%;
-            margin-top: 1vw;
-    
-        }
-    
-    }
-}
