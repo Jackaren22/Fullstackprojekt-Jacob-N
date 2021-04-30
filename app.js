@@ -33,7 +33,22 @@ app.get('/', async (req, res) => {
 
 app.get('/aboutme', (req, res) => {
   //Rendera sidan aboutme.ejs
-res.render('aboutme');
+res.render('aboutme.ejs');
+});
+
+app.get('/championpool', (req, res) => {
+  //Rendera sidan championpool.ejs
+res.render('championpool.ejs');
+});
+
+app.get('/thingsihate', (req, res) => {
+  //Rendera sidan thingsihate.ejs
+res.render('thingsihate.ejs');
+});
+
+app.get('/misc', (req, res) => {
+  //Rendera sidan misc.ejs
+res.render('misc.ejs');
 });
 
 //Lyssnar på POST requests på addressen <domain>/
