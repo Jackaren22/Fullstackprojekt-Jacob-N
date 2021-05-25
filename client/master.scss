@@ -1,12 +1,12 @@
 
-@mixin Center(){ // General function that centers stuff
+@mixin Center(){ // Generella centreringar
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
 }
 
-@mixin flexCenter($background) { // Function that generalises each box in the header
+@mixin flexCenter($background) { // Funktion som generalliserar centrering, använd primärt för min header
     display: flex;
     justify-content: center;
     align-items: center;
@@ -18,12 +18,17 @@
     
 }
 
-body { // Background Color of all pages
+body { // Bakgrunds färg för sidan
     background-color: rgb(18, 40, 110);
 }
 
-header { // Header for all my 3 pages
+header { // Header för alla sidor
     @include Center();
+
+    a{
+        background-color: rgb(0, 183, 255);
+        width: 10vw;
+    }
  
     .boxhome{
         @include flexCenter(rgb(0, 132, 255));
@@ -46,7 +51,7 @@ header { // Header for all my 3 pages
     }
 
 }
-.index { // CSS for everything on the Main page
+.index { // CSS för allt på start/home sidan
         p{
             @include Center();
             background-color: rgb(0, 110, 255);
@@ -66,3 +71,95 @@ header { // Header for all my 3 pages
     }
 }
 
+.aboutme { // CSS för allt på about me sidan
+    p{
+        @include Center();
+        background-color: rgb(0, 110, 255);
+        font-size: 40px;
+        width: 50%;
+        float: left;
+        margin-left: 6%;
+        
+    }
+
+    .picture{
+        width: 50%;
+
+        img {
+        height: auto;
+        width: 75%;
+        float: left;
+        margin-top: 3%;
+        margin-left: 3%;
+       }
+    }
+}
+.championpool { // CSS för allt på championpool sidan
+    p{
+        @include Center();
+        background-color: rgb(0, 110, 255);
+        font-size: 40px;
+        width: 50%;
+        float: left;
+        margin-left: 6%;
+        
+    }
+
+    .picture{
+        width: 50%;
+
+        img {
+        height: auto;
+        width: 50%;
+        float: left;
+        margin-top: 3%;
+        margin-left: 3%;
+       }
+    }
+}
+.thingsihate { // CSS för allt på things i hate sidan
+    p{
+        @include Center();
+        background-color: rgb(0, 110, 255);
+        font-size: 40px;
+        width: 50%;
+        float: left;
+        margin-left: 6%;
+        
+    }
+
+    .picture{
+        width: 50%;
+
+        img {
+        height: auto;
+        width: 50%;
+        float: left;
+        margin-top: 3%;
+        margin-left: 3%;
+       }
+    }
+}
+.misc { // CSS för allt på misc sidan
+    p{
+        @include Center();
+        background-color: rgb(0, 110, 255);
+        font-size: 40px;
+        width: 50%;
+        float: left;
+        margin-left: 6%;
+        
+    }
+
+    .picture{
+        width: 50%;
+
+        img {
+        height: auto;
+        width: 50%;
+        float: left;
+        margin-top: 3%;
+        margin-left: 3%;
+       }
+    }
+}

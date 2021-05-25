@@ -15,6 +15,11 @@ header {
   text-align: center;
 }
 
+header a {
+  background-color: #00b7ff;
+  width: 10vw;
+}
+
 header .boxhome {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -126,5 +131,125 @@ header .boxmisc {
   float: right;
   background-color: white;
   font-size: 10px;
+}
+
+.aboutme p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #006eff;
+  font-size: 40px;
+  width: 50%;
+  float: left;
+  margin-left: 6%;
+}
+
+.aboutme .picture {
+  width: 50%;
+}
+
+.aboutme .picture img {
+  height: auto;
+  width: 75%;
+  float: left;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.championpool p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #006eff;
+  font-size: 40px;
+  width: 50%;
+  float: left;
+  margin-left: 6%;
+}
+
+.championpool .picture {
+  width: 50%;
+}
+
+.championpool .picture img {
+  height: auto;
+  width: 50%;
+  float: left;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.thingsihate p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #006eff;
+  font-size: 40px;
+  width: 50%;
+  float: left;
+  margin-left: 6%;
+}
+
+.thingsihate .picture {
+  width: 50%;
+}
+
+.thingsihate .picture img {
+  height: auto;
+  width: 50%;
+  float: left;
+  margin-top: 3%;
+  margin-left: 3%;
+}
+
+.misc p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  background-color: #006eff;
+  font-size: 40px;
+  width: 50%;
+  float: left;
+  margin-left: 6%;
+}
+
+.misc .picture {
+  width: 50%;
+}
+
+.misc .picture img {
+  height: auto;
+  width: 50%;
+  float: left;
+  margin-top: 3%;
+  margin-left: 3%;
 }
 /*# sourceMappingURL=master.css.map */
