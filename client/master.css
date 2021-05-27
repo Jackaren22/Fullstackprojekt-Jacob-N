@@ -17,6 +17,7 @@ header {
 
 header a {
   width: 10vw;
+  font-size: 1.5vw;
 }
 
 header .boxhome {
@@ -116,20 +117,21 @@ header .boxmisc {
           align-items: center;
   text-align: center;
   background-color: #006eff;
-  font-size: 50px;
+  font-size: 2vw;
   width: 50%;
   margin-left: 25%;
 }
 
 .index .form {
   width: 50%;
+  font-size: 0.75vw;
 }
 
 .index .textbox {
   width: 25%;
   float: right;
   background-color: white;
-  font-size: 10px;
+  font-size: 0.5vw;
 }
 
 .aboutme p {
@@ -144,7 +146,7 @@ header .boxmisc {
           align-items: center;
   text-align: center;
   background-color: #006eff;
-  font-size: 40px;
+  font-size: 2vw;
   width: 50%;
   float: left;
   margin-left: 6%;
@@ -174,7 +176,7 @@ header .boxmisc {
           align-items: center;
   text-align: center;
   background-color: #006eff;
-  font-size: 40px;
+  font-size: 1.2vw;
   width: 50%;
   float: left;
   margin-left: 6%;
@@ -204,7 +206,7 @@ header .boxmisc {
           align-items: center;
   text-align: center;
   background-color: #006eff;
-  font-size: 40px;
+  font-size: 4vw;
   width: 50%;
   float: left;
   margin-left: 6%;
@@ -234,10 +236,26 @@ header .boxmisc {
           align-items: center;
   text-align: center;
   background-color: #006eff;
-  font-size: 40px;
+  font-size: 2vw;
   width: 50%;
   float: left;
   margin-left: 6%;
+}
+
+.misc p a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+  font-size: 1.5vw;
+  width: 50%;
+  float: left;
 }
 
 .misc .picture {
